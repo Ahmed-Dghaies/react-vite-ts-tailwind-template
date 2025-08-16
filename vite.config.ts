@@ -5,13 +5,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), , tailwindcss()],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve("src"),
-      "@widgets": path.resolve("src/widgets"),
-      "@features": path.resolve("src/features"),
-      "@entities": path.resolve("src/entities"),
     },
   },
 });
