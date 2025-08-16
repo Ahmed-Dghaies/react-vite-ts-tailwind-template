@@ -1,9 +1,9 @@
-import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "@/app/Layout";
-import { Home, NoMatch } from "@/pages";
 
-const App: FC = () => {
+import { Home, NoMatch } from "@/pages";
+import Layout from "./Layout";
+
+const App = () => {
   return (
     <>
       <Routes>

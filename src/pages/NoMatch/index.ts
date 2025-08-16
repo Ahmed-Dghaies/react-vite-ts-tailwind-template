@@ -1,3 +1,1 @@
-import NoMatch from "./ui/Page/Page";
-
-export { NoMatch };
+export { default } from "./NoMatch";

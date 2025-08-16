@@ -1,17 +1,24 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), , tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve("src"),
-      "@widgets": path.resolve("src/widgets"),
-      "@features": path.resolve("src/features"),
-      "@entities": path.resolve("src/entities"),
+export default defineConfig(() => {
+  return {
+    plugins: [react(), tailwindcss(), tsconfigPaths()],
+    resolve: {
+      alias: {
+        "@": path.resolve("src"),
+      },
     },
-  },
+    test: {
+      globals: true,
+      setupFiles: "./src/tests/configuration/setupTests.ts",
+      include: ["src/**/*.{test,spec}.?(*.)?(c|m)[jt]s?(x)"],
+      env: loadEnv("test", process.cwd(), ""),
+      environment: "./src/tests/configuration/environment.ts",
+    },
+  };
 });
