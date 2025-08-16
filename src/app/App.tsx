@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
-import Layout from "@/app/Layout";
 import { Home, NoMatch } from "@/pages";
+import Layout from "./Layout";
 
 const App = () => {
   return (
