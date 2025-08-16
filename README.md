@@ -113,7 +113,7 @@ src/
 
 - **ESLint** — with React, Hooks, and Storybook plugins
 - **Prettier** — with Tailwind class sorting
-- **Vitest** — testing framework with `happy-dom` / `jsdom`
+- **Vitest** — testing framework with `happy-dom`
 - **Redux Toolkit** — opinionated state management
 - **React Hook Form** — forms made simple
 
