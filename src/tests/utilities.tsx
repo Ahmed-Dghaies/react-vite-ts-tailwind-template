@@ -4,7 +4,7 @@ import { Slide, ToastContainer } from "react-toastify";
 import type { DeepPartial } from "react-hook-form";
 import { Provider } from "react-redux";
 
-import { makeStore, RootState } from "@/app/store/store";
+import { makeStore, RootState } from "@/app/store";
 
 export function renderWithProviders(
   ui: React.ReactElement,
