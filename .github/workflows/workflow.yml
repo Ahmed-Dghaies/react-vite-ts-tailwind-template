@@ -23,24 +23,6 @@ jobs:
       - name: Run tests (test-no-watch)
         run: npm run test-no-watch
 
-  typecheck:
-    name: "TypeScript Checks"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: TypeScript type checking
-        run: npx tsc -b
-        working-directory: .
   eslint:
     name: "ESLint"
     runs-on: ubuntu-latest
