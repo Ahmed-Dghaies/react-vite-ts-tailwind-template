@@ -133,4 +133,4 @@ Then serve with any static host (e.g., Netlify, Vercel, GitHub Pages).
 
 ## 📄 License
 
-MIT © [Your Name]
+MIT © Ahmed Dghaies
